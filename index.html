@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            callback - exercise
+        */
+
+        function greaterThan6(arr, callback) {
+            for (let i = 0; i < arr.length; i++) {
+                const val = arr[i];
+                if (val > 6) {
+                    callback(val);
+                } 
+            }
+        }
+
+        function showValue(value) {
+            console.log(value);
+        }
+
+        const arr1 = [1,2,3,4,5,6,7,8,9,10,11,12];
+        
+        greaterThan6(arr1, showValue);
+    
+        greaterThan6(arr1, function (data) {console.log("Data:", data);})
+    </script>
+</body>
+</html>
